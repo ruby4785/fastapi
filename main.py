@@ -1,7 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, responses
 # from deta import Drive
 from deta import Deta
-deta = Deta("c0vgvnpj_W191huHW2sxXy54BPA89qNSoqMLZLfRR")
+deta = Deta("c0vgvnpj_4CjoaAYDXWuuC2CpC5iMPp9haP7GAw8J")
 files= deta.Drive("s1")
 # files = Drive("bus_video_storage_api") #Uncomment for local
 app = FastAPI()

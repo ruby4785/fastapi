@@ -34,7 +34,7 @@ async def serve(bus_id, bus_date):
     img = files.get(name)
     #
     if img != None:
-        return responses.FileResponse(img.read())
+        return responses.StreamingResponse(img.iter_chunks(), media_type="video/mp4") 
 
 @app.delete('/bus_id/{bus_id}/bus_date/{bus_date}/')
 async def delete(bus_id,bus_date):
